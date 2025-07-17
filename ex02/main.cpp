@@ -26,14 +26,15 @@ main()
     }
     std::cout << "------------------" << std::endl;
     {
-        const Dog dog1 = Dog();
-        const Dog dog2 = Dog(dog1);
-        const Dog dog3 = Dog(dog2);
-    }
-    {
-        const Cat cat1 = Cat();
-        const Cat cat2 = Cat(cat1);
-        const Cat cat3 = Cat(cat2);
+        //Animal animal = Animal(); //これは無効
+        const Animal* tarou = new Dog();
+        tarou->makeSound();
+        delete tarou;
+        // Animalは抽象クラスなので
+        // 直接インスタンスにできないが、
+        // 継承した派生クラスを多様性で
+        // インスタンスを作ることはできる。
+
     }
     std::cout << "------------------" << std::endl;
 }
