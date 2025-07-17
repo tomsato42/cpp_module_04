@@ -1,11 +1,19 @@
 #ifndef CAT_H
 #define CAT_H
 #include "Animal.h"
+#include "Brain.h"
 
-class Cat : public Animal {
-    public:
+class Cat : public Animal
+{
+public:
     Cat();
-    void makeSound() const;
+    Cat(const Cat &other);
+    ~Cat();
+    void
+    makeSound() const;
+
+private:
+    Brain *brain;
 };
 
 #endif // CAT_H

@@ -5,26 +5,29 @@
 #include "WrongCat.h"
 
 #include <iostream>
-int main()
+int
+main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete j;
-    delete i;
-    std::cout << "-------------------------" << std::endl;
-    const WrongAnimal* wrongMeta = new WrongAnimal();
-    const WrongAnimal* wrongJ = new WrongCat();
-    std::cout << wrongJ->getType() << " " << std::endl;
-    wrongJ->makeSound();
-    wrongMeta->makeSound();
-    delete wrongMeta;
-    delete wrongJ;
-    return 0;
+    {
+        const Animal *animals[10];
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (i % 2 == 0)
+                animals[i] = new Dog();
+            else
+                animals[i] = new Cat();
+        }
+        for (int i = 0; i < 10; i++)
+        {
+            animals[i]->makeSound();
+            delete animals[i];
+        }
+    }
+    std::cout << "------------------" << std::endl;
+    {
+        const Dog dog1 = Dog();
+        const Dog dog2 = Dog(dog1);
+        const Dog dog3 = Dog(dog2);
+    }
 }
