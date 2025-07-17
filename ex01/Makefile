@@ -1,5 +1,5 @@
 # HERE TO PROJECT NAME
-NAME		:= 
+NAME		:= IDontWantToSetTheWorldOnFire
 
 CXX		 := c++
 CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98 -pedantic
@@ -15,7 +15,12 @@ OBJ_DIR	 := $(ROOT_DIR)/obj
 IDFLAGS	 := -I$(INC_DIR)
 
 # HERE TO SRC FILES
-SRC :=	\
+SRC :=	main.cpp\
+        Animal.cpp\
+        Cat.cpp\
+       	Dog.cpp\
+       	WrongAnimal.cpp\
+       	WrongCat.cpp\
 	
 
 OBJ := $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC))
