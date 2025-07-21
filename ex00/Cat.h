@@ -2,10 +2,16 @@
 #define CAT_H
 #include "Animal.h"
 
-class Cat : public Animal {
-    public:
+class Cat : public Animal
+{
+public:
     Cat();
-    void makeSound() const;
+    ~Cat();
+    Cat(const Cat &other);
+    Cat &
+    operator=(const Cat &other);
+    void
+    makeSound() const;
 };
 
 #endif // CAT_H
