@@ -27,6 +27,7 @@ AMateria::operator=(const AMateria &other)
 {
     if (this != &other)
     {
+        type_ = other.type_;
     }
     return *this;
 }

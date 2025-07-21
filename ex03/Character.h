@@ -34,8 +34,7 @@ private:
     static void
     copy_moves(AMateria **dst, AMateria *const *src);
     void
-        delete_moves();
-
+    delete_moves();
 };
 
 #endif // CHARACTER_H
