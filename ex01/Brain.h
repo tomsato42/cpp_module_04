@@ -15,7 +15,7 @@ public:
     void setIdea(unsigned int index, std::string idea);
     std::string getIdea(unsigned int index) const;
 private:
-    std::string ideas[100];
+    std::string ideas[IDEA_COUNT];
 };
 
 #endif // BRAIN_H

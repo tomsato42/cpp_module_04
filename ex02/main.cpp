@@ -1,8 +1,6 @@
 #include "Animal.h"
 #include "Cat.h"
 #include "Dog.h"
-#include "WrongAnimal.h"
-#include "WrongCat.h"
 
 #include <iostream>
 int
@@ -26,7 +24,7 @@ main()
     }
     std::cout << "------------------" << std::endl;
     {
-        //Animal animal = Animal(); //これは無効
+        // Animal animal = Animal(); //これは無効
         const Animal* tarou = new Dog();
         tarou->makeSound();
         delete tarou;
